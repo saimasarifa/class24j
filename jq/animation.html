@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jQuery example</title>
+    <link rel="stylesheet" type="text/css"href="../css/bootstrap.min.css" >
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script  type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script  type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style>
+        .test{
+            font-size: 10px;
+        }
+        #div2{
+            display: none;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="container" >
+    this is the first div
+    <p>i am a paragraph</p>
+    <h1> heading is to show the first div</h1>
+    <button>click me me me</button>
+</div>
+<div class="container" id="div2">
+
+    <div class="well">
+
+        <h1 id="hello">second div in hidding</h1>
+        <p> ta ta tasta
+            ta ta tasta
+            ta ta tasta</p>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+//$('h1').addClass("test");
+        $('button').click(function(){
+            $('h1').addClass("well");
+            $('#div2').show();
+        });
+            $('#hello').click(function(){
+                $('#div2').animate({'margin-top':'200px','margin-left':'100px'},2000);
+            });
+
+
+
+
+    });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

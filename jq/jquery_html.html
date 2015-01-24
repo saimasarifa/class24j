@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script type="application/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <style>
+        .test{
+            font-size: 10px;
+        }
+        #div2{
+            display: none;
+        }
+        /*#hello{
+            display: none;
+        }*/
+        #backbtn{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <p>I am a paragraph</p>
+    <button>click me</button>
+    <h1>Welcome to jQuery</h1>
+</div>
+
+<div class="container" id="div2">
+    <div class="well">
+        <h1 id="hello">Hello jQuery</h1>
+        <p>
+            Hello jQuery application of javascript.Hello jQuery application of javascript.Hello jQuery application of javascript.
+            Hello jQuery application of javascript.Hello jQuery application of javascript.Hello jQuery application of javascript.
+            Hello jQuery application of javascript.Hello jQuery application of javascript.Hello jQuery application of javascript.
+        </p>
+        <button id="backbtn">Back</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        /*alert('I am Ready');*/
+        /*$('h1').addClass("test");*/
+        /*$('p').click(function(){*/
+        $('button').click(function(){
+            /*$('h1').addClass("test");*/
+            $('h1').addClass("well");
+            /*$('h1').hide();*/
+            $('#div2').show();
+        });
+
+        $('#hello').click(function(){
+            $('#div2').animate({'margin-top':'200px','margin-left':'100px'},2000);
+            $('#backbtn').show();
+        });
+        $('#backbtn').click(function(){
+            $('#div2').animate({'margin-top':'0px','margin-left':'20px'},2000);
+        });
+    });
+</script>
+</body>
+</html>

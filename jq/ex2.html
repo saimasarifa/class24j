@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jQuery example</title>
+    <link rel="stylesheet" type="text/css"href="../css/bootstrap.min.css" >
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script  type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script  type="text/javascript" src="js/bootstrap.min.js"></script>
+<style>
+    .test{
+        font-size: 10px;
+    }
+</style>
+
+</head>
+<body>
+<div class="container">
+    hello world
+    <p>i am a paragraph</p>
+    <h1> i am heading</h1>
+    <button>hello</button>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+//$('h1').addClass("test");
+        $('button').click(function(){
+            $('h1').addClass("test");
+            // $('h1').hide();
+
+
+
+        });
+    });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

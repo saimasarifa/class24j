@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery validation plug-in - requirejs demo</title>
+
+		<link rel="stylesheet" href="css/screen.css">
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+        <h1 id="banner"><a href="http://jqueryvalidation.org/">jQuery Validation Plugin</a></h1>
+
+
+
+        <style type="text/css">
+			#commentForm { width: 500px; }
+			#commentForm label { width: 250px; }
+			#commentForm label.error, #commentForm input.submit { margin-left: 253px; }
+		</style>
+</head>
+<body>
+<div class="container">
+
+	<div id="main">
+
+		<p></p>
+		<form class="cmxform" id="commentForm" method="get" action="">
+			<fieldset>
+				<legend>Please provide your name, email address (won't be published) and a comment</legend>
+				<p>
+					<label for="cname">Name (required, at least 5 characters)</label>
+					<input id="cname" name="name" minlength="5" type="text" required>
+				</p>
+				<p>
+					<label for="cemail">E-Mail (required)</label>
+					<input id="cemail" type="email" name="email" required>
+				</p>
+				<p>
+					<label for="curl">URL (optional)</label>
+					<input id="curl" type="url" name="url">
+				</p>
+				<p>
+					<label for="ccomment">Your comment (required)</label>
+					<textarea id="ccomment" name="comment" required></textarea>
+				</p>
+				<p>
+					<input class="submit" type="submit" value="Submit">
+				</p>
+			</fieldset>
+		</form>
+
+		<script>
+	$("#commentForm").validate({
+        rules: {
+            required: true,
+            minlength: 6
+        },
+
+            massages:{
+        namee:"please insert your name" }
+    });
+		</script>
+		<script src="lib/require.js" data-main="app.js"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+	</div>
+</body>
+</html>

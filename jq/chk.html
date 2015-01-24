@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css"href="css/bootstrap.min.css" >
+    <script  type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script  type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style>
+        .sized{
+            width: 100px;
+            float: left;
+        }
+        #big-image{
+            width: 400px;
+            float: left;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="col-md-6">
+        <div class="small-images">
+            <img class="img-thumbnail sized" src="img/1.jpg">
+            <img class="img-thumbnail sized" src="img/2.jpg">
+            <img class="img-thumbnail sized" src="img/3.jpg">
+            <img class="img-thumbnail sized" src="img/4.jpg">
+            <img class="img-thumbnail sized" src="img/5.jpg">
+
+        </div>
+        <div id="big-image">
+            <img src="img/1.jpg">
+            <img src="img/2.jpg">
+            <img src="img/3.jpg">
+            <img src="img/4.jpg">
+            <img src="img/5.jpg">
+
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    $(function(){
+        $("#big-image img:eq(0)").nextAll().hide();
+        $(".small-images img").click(function(e){
+            var url = $(this).index();
+            $("#big-image img").eq(url).show().siblings().hide();
+        });
+    });
+
+
+</script>
+</body>
+</html>
